@@ -11,7 +11,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
 
 </head>
 <body>
@@ -40,11 +40,11 @@
             </div>
 
             <!--Hero section-->
-            <div class="hero-section" >
+            <div class="hero-section" id="AboutMe" >
 
                 <div class=" faded-text" >Sanjay Dangi</div>
     
-                <div class="hero-section-left" id="AboutMe">
+                <div class="hero-section-left" >
                     <div class="hero-section-heading" >Hi !! Sanjay Dangi</div>
     
                     <div class=" hero-section-heading hero-section-sub-heading">
@@ -124,8 +124,10 @@
 
                         <div class="project-sub-heading">A showcase of my personal and academic projects built using modern web technologies.</div>
 
+
                         <div class="btn-grp">
-                            <button class="btn-pink btn-project read-more-btn">Read More</button>
+                            <!-- <button class="btn-pink btn-project read-more-btn">Read More</button> -->
+                            <button class="btn-pink btn-project read-more-btn" data-details="details-1">Read More</button>
 
                             <a href="https://github.com/SanjayDangi09/Portfolio-Website.git"  target="_blank" rel="noopener noreferrer">
                                 <i title="GitHubLink" class="fa-brands fa-github icon"></i>
@@ -136,6 +138,38 @@
                             </a>
                         </div>
                     </div>
+                </div>
+
+                <!-- More Details About the Project -->
+
+                <div id="details-1" class="project-details" style="display:none;">
+                  <h4 class="details-title">Portfolio Website</h4>
+                  <div class="details-body">
+                    <p>The <strong>Personal Portfolio Website</strong> is a fully responsive and interactive platform 
+                      built to showcase my academic, technical, and personal projects. It also highlights 
+                      my skills, achievements, and career goals in a professional and visually appealing manner.
+                    </p>
+                    <ul>
+                      <li>Modern, clean, and minimalistic UI design.</li>
+                      <li>Fully responsive layout for desktop, tablet, and mobile.</li>
+                      <li>Interactive animations, smooth scrolling, and hover effects.</li>
+                      <li>Dedicated project showcase with GitHub Links</li>
+                      <li>About Me section with skills, education, and career objectives.</li>
+                      <li>Integrated contact form for direct communication.</li>
+                    </ul>
+
+                    <h3> Future Enhancements</h3>
+                    <ul>
+                      <li>Add Dark Mode for better accessibility.</li>
+                      <li>Introduce a Blog Section to share learning experiences.</li>
+                      <li>Integrate backend for contact form data storage.</li>
+                      <li>Enable analytics to track visitor interactions.</li>
+                    </ul>
+                    <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+                    <p class="details-links">
+                      <a href="https://github.com/SanjayDangi09/Portfolio-Website.git" target="_blank" rel="noopener">GitHub</a> ·
+                    </p>
+                  </div>
                 </div>
 
                 <!--Project 2-->
@@ -168,7 +202,8 @@
                       </p>
 
                       <div class="btn-grp">
-                        <button class="btn-pink btn-project">Read More</button> 
+                        <!-- <button class="btn-pink btn-project">Read More</button>  -->
+                        <button class="btn-pink btn-project read-more-btn" data-details="details-2">Read More</button>
                         <a href="https://github.com/SanjayDangi09/Razor-Pay-Clone-.git " target="_blank" rel="noopener noreferrer"> 
                           <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                         </a>
@@ -176,6 +211,27 @@
                           <i title="Live Link" class="fa-solid fa-link icon"></i>
                         </a>
                       </div>
+                    </div>
+                  </div>
+
+                  <!-- More Details About the Project -->
+
+                  <div id="details-2" class="project-details" style="display:none;">
+                    <h4 class="details-title">Razorpay Clone</h4>
+                    <div class="details-body">
+                      <p>
+                         The <strong>Razorpay Clone</strong> is a responsive and visually appealing 
+                          replica of the official Razorpay website. The project focuses on recreating 
+                          the design, layout, and interactive elements to practice real-world UI/UX 
+                          implementation and modern frontend development techniques.
+                      </p>
+                      <h3> Future Enhancements</h3>
+                      <ul>
+                        <li>Convert the static clone into a dynamic website using APIs.</li>
+                        <li>Add payment gateway simulation for practice purposes.</li>
+                      </ul>
+                      <p><strong>Tech:</strong> HTML, CSS, Tailwind</p>
+                      <p class="details-links"><a href="https://github.com/SanjayDangi09/Razor-Pay-Clone-.git" target="_blank">GitHub</a></p>
                     </div>
                   </div>
 
@@ -206,7 +262,8 @@
                         A simple and secure random password generator that creates strong, customizable passwords instantly.
                       </p>
                       <div class="btn-grp">
-                        <button class="btn-pink btn-project">Read More</button>
+                        <!-- <button class="btn-pink btn-project">Read More</button> -->
+                         <button class="btn-pink btn-project read-more-btn" data-details="details-3">Read More</button>
 
                         <a href="https://github.com/SanjayDangi09/Password-Generator.git" target="_blank" rel="noopener noreferrer">
                           <i title="GitHubLink" class="fa-brands fa-github icon"></i>
@@ -215,6 +272,40 @@
                           <i title="Live Link" class="fa-solid fa-link icon"></i>
                         </a>
                       </div>
+                    </div>
+                  </div>
+
+                  <!-- More Details About the Project -->
+
+                  <div id="details-3" class="project-details" style="display:none;">
+                    <h4 class="details-title">Password-Generator</h4>
+                    <div class="details-body">
+                      <p>
+                        The <strong>Password Generator</strong> is a simple yet powerful web tool 
+                        that creates strong, random, and customizable passwords instantly. 
+                        It ensures security by combining multiple character sets such as 
+                        uppercase, lowercase, numbers, and special symbols.
+                      </p>
+
+                        <h3> Key Features</h3>
+                        <ul>
+                          <li>Generates random and secure passwords instantly.</li>
+                          <li>Customizable length and inclusion of different character sets.</li>
+                          <li>Copy-to-clipboard functionality for ease of use.</li>
+                          <li>An password strength indicator (Weak, Medium, Strong).</li>
+                          <li>Responsive design for both desktop and mobile devices.</li>
+                          <li>Minimal and clean UI for user-friendly experience.</li>
+                        </ul>
+
+                         <h3>🛠️ Tech Stack</h3>
+                          <ul>
+                            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                            <li><strong>Version Control:</strong> Git & GitHub</li>
+                          </ul>
+
+                      <p class="details-links">
+                        <a href="https://github.com/SanjayDangi09/Password-Generator.git" target="_blank" rel="noopener">GitHub</a> ·
+                      </p>
                     </div>
                   </div>
 
@@ -242,14 +333,48 @@
                         A real-time weather app that displays current conditions and forecasts using the OpenWeatherMap API.
                       </p>
                       <div class="btn-group">
-                        <button class="btn-pink btn-project">Read More</button>
+                        <!-- <button class="btn-pink btn-project">Read More</button> -->
+                        <button class="btn-pink btn-project read-more-btn" data-details="details-4">Read More</button> 
                         <a href="https://github.com/SanjayDangi09/Weather-App.git" target="_blank" rel="noopener noreferrer">
                           <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                         </a>
-                        <a href="https://github.com/SanjayDangi09/Modern-Chair.git">
+                        <a href="https://github.com/SanjayDangi09/Weather-App.git">
                           <i title="Live Link" class="fa-solid fa-link icon"></i>
                         </a>
                       </div>
+                    </div>
+                  </div>
+
+                  <!-- More Details About the Project -->
+
+                  <div id="details-4" class="project-details" style="display:none;">
+                    <h4 class="details-title">Weather App</h4>
+                    <div class="details-body">
+                      <p>
+                        The <strong>Weather App</strong> is a real-time web application 
+                        that displays current weather conditions and forecasts for any 
+                        city worldwide. It fetches live data using the 
+                        <strong>OpenWeatherMap API</strong> and presents it in a clean, 
+                        user-friendly interface.
+                      </p>
+
+                      <h3> Key Features</h3>
+                      <ul>
+                        <li>Search weather by city name.</li>
+                        <li>Displays temperature, humidity, wind speed, and conditions.</li>
+                        <li>Fetches real-time data using OpenWeatherMap API.</li>
+                        <li>Geolocation support to fetch user’s current location automatically.</li>
+                        <li>Dynamic weather icons and background changes based on conditions.</li>
+                        <li>Responsive design for desktop and mobile.</li>
+                      </ul>
+                       <h3>🛠️ Tech Stack</h3>
+                        <ul>
+                          <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                          <li><strong>Styling:</strong> CSS</li>
+                          <li><strong>API Integration:</strong> OpenWeatherMap API</li>
+                          <li><strong>Version Control:</strong> Git & GitHub</li>
+                        </ul>
+                      <p class="details-links"><a href="https://github.com/SanjayDangi09/Weather-App.git" target="_blank">GitHub</a></p>
                     </div>
                   </div>
 
@@ -277,7 +402,8 @@
                         A sleek and responsive product showcase page for a modern chair, built with clean design and smooth UI interactions
                       </p>
                       <div class="btn-group">
-                        <button class="btn-pink btn-project">Read More</button>
+                        <!-- <button class="btn-pink btn-project">Read More</button> -->
+                        <button class="btn-pink btn-project read-more-btn" data-details="details-5">Read More</button>
                         <a href="https://github.com/SanjayDangi09/Modern-Chair.git" target="_blank" rel="noopener noreferrer">
                           <i title="GitHubLink" class="fa-brands fa-github icon"></i>
                         </a>
@@ -287,9 +413,44 @@
                       </div>
                     </div>
                   </div>
+
+                  <!-- More Details About the Project -->
+
+                  <div id="details-5" class="project-details" style="display:none;">
+                    <h4 class="details-title">Modern Chair</h4>
+                    <div class="details-body">
+                      <p>
+                        The <strong>Modern Chair</strong> project is a sleek and responsive 
+                        product showcase page designed to highlight a single product with 
+                        clean design, smooth interactions, and a focus on modern UI/UX practices. 
+                        It demonstrates the ability to create professional, real-world product pages.
+                      </p>
+                      <h3> Future Enhancements</h3>
+                      <ul>
+                        <li>Add product customization options (color, size, material).</li>
+                        <li>Integrate a shopping cart and checkout flow.</li>
+                        <li>Include customer reviews and rating section.</li>
+                        <li>Enhance visuals with 3D product model integration.</li>
+                      </ul>
+                      <p class="details-links"><a href="https://github.com/SanjayDangi09/Modern-Chair.git" target="_blank">GitHub</a></p>
+                    </div>
+                  </div>
                   
-            </div>
-        </div> 
+              </div>
+
+              <!-- Modal -->
+              <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+                <div class="modal-content" role="document" aria-labelledby="modal-title">
+                  <button class="modal-close" aria-label="Close modal">&times;</button>
+                  <h3 id="modal-title"></h3>
+                  <div id="modal-body"></div>
+                </div>
+              </div>
+
+          </div> 
+
+      
+
         
         <!--Skills Section-->
         <div id="Skills" class="skills-container ">
@@ -408,7 +569,9 @@
               </div>
 
               <div class="icon-wrapper">
-                <i class="fa-brands fa-linkedin icon"></i>
+                <i class="fa-brands fa-linkedin icon">
+                  <a href="htttp://www.instagram.com"></a>
+                </i>
                 <i class="fa-brands fa-github icon"></i>
                 <i class="fa-brands fa-twitter icon"></i>
                 <i class="fa-brands fa-instagram icon"></i>
@@ -420,8 +583,7 @@
       </div>
   </div>
 
-    <!-- scripts copy paste krni h yha  -->
-
+  <script src="script.js"></script>
     
 </body>
 </html>

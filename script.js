@@ -13,28 +13,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the button that opens the modal
-var buttons = document.querySelectorAll('.read-more-btn');
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on the button, open the modal and set the content
-buttons.forEach(function(button) {
-  button.onclick = function() {
-    // Find the project details within the same project card
-    var projectDetails = this.closest('.project-card').querySelector('.project-details').innerHTML;
-    document.getElementById("modal-description").innerHTML = projectDetails;
-    modal.style.display = "block";
+document.addEventListener('DOMContentLoaded', function () {
+  const modal = document.getElementById('project-modal');
+  const titleEl = modal.querySelector('#modal-title');
+  const bodyEl = modal.querySelector('#modal-body');
+  const closeBtn = modal.querySelector('.modal-close');
+  const readBtns = document.querySelectorAll('.read-more-btn');
+
+  // open modal with content from hidden details block
+  function openModal(detailsId) {
+    const details = document.getElementById(detailsId);
+    if (!details) return;
+
+    // get title and body from details block
+    const titleNode = details.querySelector('.details-title');
+    const bodyNode = details.querySelector('.details-body');
+
+    titleEl.textContent = titleNode ? titleNode.textContent : '';
+    bodyEl.innerHTML = bodyNode ? bodyNode.innerHTML : '';
+
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+
+    // move focus to close button for accessibility
+    closeBtn.focus();
   }
+
+  // close modal and cleanup
+  function closeModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+
+    // optional: clear content
+    titleEl.textContent = '';
+    bodyEl.innerHTML = '';
+  }
+
+  // attach click handlers to all read-more buttons
+  readBtns.forEach(btn => {
+    btn.addEventListener('click', function () {
+      const detailsId = btn.dataset.details;
+      if (!detailsId) return;
+      openModal(detailsId);
+    });
+  });
+
+  // close when clicking the X
+  closeBtn.addEventListener('click', closeModal);
+
+  // close when clicking outside modal-content (on overlay)
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('show')) {
+      closeModal();
+    }
+  });
 });
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+
+
