@@ -570,6 +570,11 @@ background-image: url(./projects/ModernChair.png);
 right: 5%;
 }
 
+#project6 {
+background-image: url(./projects/Project6.png);
+left: 5%;
+}
+
 /* extra things */
 
 /* Modal overlay */
@@ -650,12 +655,6 @@ body.modal-open {
   .modal-content { padding: 16px; border-radius: 8px; }
   .modal-close { font-size: 22px; right: 8px; top: 8px; }
 }
-
-
-
-
-
-
 
 
 .skills-container{

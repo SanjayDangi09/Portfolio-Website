@@ -10,9 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('project-modal');
   const titleEl = modal.querySelector('#modal-title');
